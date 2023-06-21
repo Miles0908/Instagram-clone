@@ -1,0 +1,8 @@
+.Camera {
+    position: relative;
+    top: 6px;
+    width: 100vw;
+    height: calc(100vh - 66px);
+  
+    
+  }

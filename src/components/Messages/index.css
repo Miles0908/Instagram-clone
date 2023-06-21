@@ -1,0 +1,22 @@
+.Messages input {
+ position: relative;
+ left: 20px;
+
+  width: 88vw;
+  height: 25px;
+  background-color: #76768065;
+  border-radius: 12px;
+  
+}
+.Messages li{
+  position: relative;
+  left: -26px;
+  list-style-type: none;
+}
+.Messages h4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+}

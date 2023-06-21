@@ -1,0 +1,37 @@
+.TopBar{
+    position: relative;
+   display: flex;
+   justify-content: space-between;
+   padding: 12px;
+   background-color: #FAFAFA;
+   box-shadow: 0px 0.33px 0px #a6a6aa;
+
+}
+.TopBar__Logo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.TopBar__Actions{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.TopBar__Camera,
+.TopBar__Logo,
+.TopBar__Actions--tv,
+.TopBar__Actions--msg{
+    cursor: pointer;
+    transition: transform 1.35s;
+}
+
+@media screen and (min-width: 480px) {
+    .TopBar{
+       display: none;
+      
+    }
+}
+
