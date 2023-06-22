@@ -1,27 +1,37 @@
 import "./index.css";
 
-import {
-  CameraIcon,
-  IGTVIcon,
-  LogoIcon,
-  MessangerIcon,
-} from "../../components/icons";
+//incons
+import { CameraIcon, IGTVIcon, LogoIcon, MessangerIcon } from "../../components/icons";
 
-const TopBar = ({ setSection }) => {
-  const onHandleClick=(sectionName)=>setSection(sectionName)
+const TopBar = ({ setSection, setCamera }) => {
+  const onHandleClick = (sectionName) => {
+    if (sectionName !== "camera") {
+      setSection(sectionName);
+      setCamera(true);
+    }
+    setSection(sectionName);
+  };
+
   return (
     <div className="TopBar">
-      <div className="TopBar__Camera" onClick={()=>onHandleClick("camera")}>
+      <div className="TopBar__Camera" onClick={() => onHandleClick("camera")}>
         <CameraIcon />
       </div>
-      <div className="TopBar__Logo"onClick={()=>onHandleClick("home")}>
+      <div className="TopBar__Logo" onClick={() => onHandleClick("home")}>
         <LogoIcon />
       </div>
+
       <div className="TopBar__Actions">
-        <div className="TopBar__Actions--tv" onClick={()=>onHandleClick("tv")}>
+        <div
+          className="TopBar__Actions--tv"
+          onClick={() => onHandleClick("tv")}
+        >
           <IGTVIcon />
         </div>
-        <div className="TopBar__Actions--msg" onClick={()=>onHandleClick("messages")}>
+        <div
+          className="TopBar__Actions--msg"
+          onClick={() => onHandleClick("messages")}
+        >
           <MessangerIcon />
         </div>
       </div>

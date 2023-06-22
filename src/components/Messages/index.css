@@ -8,10 +8,19 @@
   border-radius: 12px;
   
 }
+.Messages-hidden{
+  content: "";
+}
 .Messages li{
+
   position: relative;
   left: -26px;
   list-style-type: none;
+  cursor: pointer;
+  padding: 13px;
+}
+.Messages li:active{
+  background-color: lightgray;
 }
 .Messages h4{
   display: flex;

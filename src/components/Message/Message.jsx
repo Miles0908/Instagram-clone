@@ -1,6 +1,9 @@
 import "./index.css";
-import { CameraIcon } from "../icons";
+
+
 const Message = ({ messages }) => {
+
+
   const truncate = (str, n) => {
     return str.length > n ? str.substring(0, n - 1) + "..." : str;
   };
@@ -11,11 +14,11 @@ const Message = ({ messages }) => {
         src={messages?.userImage ? messages?.userImage : ""}
         alt={messages?.username}
       />
-      <h12>
+      <p>
         <b className="Message__Username">{messages?.username}</b>
         <br />
         <p className="Message__Content">{truncate(messages.message, 9)}</p>
-      </h12>
+      </p>
 
       <p className="Message__Ago">.{messages.timestamp}</p>
     </div>
