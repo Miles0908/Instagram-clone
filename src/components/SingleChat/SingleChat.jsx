@@ -37,7 +37,7 @@ const SingleChat = () => {
 
   return (
     <div>
-      {console.log("click")}
+ 
       <div className="chat-container">
         <div className="message-list">
           {messageList.map((message) => (
