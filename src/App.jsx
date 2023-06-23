@@ -4,6 +4,7 @@ import Stories from "./components/Stories";
 import Posts from "./components/Posts";
 import Camera from "./components/Camera/Camera";
 import Messages from "./components/Messages/Messages";
+import TabBar from "./components/TabBar";
 
 import { storiesData } from "./components/mocks/stories";
 import { postsData } from "./components/mocks/posts";
@@ -13,8 +14,8 @@ import { messagesData } from "./components/mocks/messages";
 import "./App.css";
 
 function App() {
-  const [stories, setStories] = useState([]);
-  const [user, setUser] = useState(userData);
+  const [stories, setStories] = useState( []);
+  const [user, setUser] = useState([]);
   const [posts, setPosts] = useState([]);
   const [messages, setMessages] = useState(messagesData);
 
@@ -30,7 +31,7 @@ function App() {
 
   useEffect(() => {
     //Chiamata api per le stories
-    fetch("https://api.npoint.io/c75cbe96b4d90aa4ba7d")
+    fetch("https://api.npoint.io/a1e8bd07f30063fdeb75")
       .then((res) => res.json())
       .then((data) => setStories(data));
   }, []);
@@ -46,16 +47,20 @@ function App() {
       case "home":
         return (
           <>
-            <Stories user={user} stories={stories} />
+            <Stories user={user} stories={stories}  />
+            <TabBar/>
             <Posts posts={posts} />
           </>
         );
       case "camera":
         return <Camera camera={camera} setCamera={setCamera} />;
+        <TabBar/>
       case "tv":
         return <h1>TVVVVV</h1>;
+        <TabBar/>
       case "messages":
         return <Messages messages={messages} user={user} />;
+        <TabBar/>
     }
   };
 
@@ -63,6 +68,7 @@ function App() {
     <div className="App">
       <TopBar setSection={setSection} setCamera={setCamera} />
       {onSectionRender()}
+      
     </div>
   );
 }

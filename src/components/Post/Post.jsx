@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./index.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from "swiper";
+import 'swiper/css';
 
 import { LikeIcon } from "../../components/icons";
 import { CommentIcon } from "../../components/icons";
@@ -32,9 +35,13 @@ const Post = ({ post }) => {
         <div className="PostTop__Actions"></div>
       </div>
       <div className="PostContent">
+        <Swiper pagination={true} modules={{Pagination}}>
         {post?.media?.map((media) => (
+          <SwiperSlide>
           <img key={media?.id} src={media?.src} />
+          </SwiperSlide>
         ))}
+        </Swiper>
       </div>
 
       <div className="PostActions">

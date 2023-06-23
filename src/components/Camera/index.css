@@ -7,7 +7,7 @@
 
 .Camera__filters {
   position: absolute;
-  bottom: 0;
+  bottom: 70px;
   padding: 0;
   width: 100%;
 }

@@ -1,5 +1,5 @@
 .chat-container {
-    position: relative;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -13,20 +13,20 @@
   color: white;
 }
 .chat-container img {
-   
   width: 60px;
   height: 60px;
   border: 1px solid purple;
   border-radius: 100%;
 }
-.content{
-    border: 1px solid;
-    border-radius: 12px;
-    margin: 18px;
+.content {
+  border: 1px solid;
+  border-radius: 12px;
+  margin: 18px;
 }
 
 .chat-container input {
-  
+  position: relative;
+ /*  bottom: 60px; */
   width: 300px;
   margin: 2px;
   height: 40px;
@@ -36,11 +36,11 @@
 }
 
 .chat-container button {
-  
+  position: relative;
+  /* bottom: 60px; */
   height: 41px;
   width: 53px;
   border-radius: 4px;
   background-color: #5c5470;
   color: #dbd8e3;
 }
-

@@ -5,7 +5,7 @@ const Story = ({ story }) => {
     <div className="Story">
       {story?.isLive && <div className="Story__live">{"LIVE"}</div>}
       <div className="Story__Image">
-        <img src={story?.userimage} alt={story?.username} />
+        <img src={story?.userImage} alt={story?.userame} />
       </div>
       <p className="Story__Username">
         {story?.isUser ? "Your Story" : story.username}

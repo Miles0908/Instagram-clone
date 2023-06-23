@@ -3,6 +3,7 @@ import Message from "../Message/Message";
 import { useState, useEffect } from "react";
 import SingleChat from "../SingleChat";
 
+
 const Messages = ({ messages, user }) => {
 
   const [selectedMessage, setSelectedMessage] = useState(null);
@@ -22,6 +23,7 @@ const Messages = ({ messages, user }) => {
         <SingleChat message={messages.find((m) => m.id === selectedMessage)} />
       ) : (
       <div className="Messages">
+        
         <div>
           <h4>{user.username}</h4>
         </div>

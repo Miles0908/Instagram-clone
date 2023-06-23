@@ -3,15 +3,15 @@ import React, { useState, useEffect } from "react";
 
 const SingleChat = () => {
   const [chatName, setChatName] = useState("");
-  const [messageList, setMessageList] = useState([]); // a state variable for the message list
-  const [inputValue, setInputValue] = useState(""); // a state variable for the input value
+  const [messageList, setMessageList] = useState([]); 
+  const [inputValue, setInputValue] = useState(""); 
 
   useEffect(() => {
     fetch("https://api.npoint.io/45615d0ddef177eef95b")
       .then((res) => res.json())
       .then((data) => {
         setChatName(data);
-        setMessageList(data.messageList[0].messages); // assuming you want to display the first message list
+        setMessageList(data.messageList[0].messages); 
       });
     console.log(chatName);
   }, []);

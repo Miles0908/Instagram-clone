@@ -1,0 +1,54 @@
+.TabBar {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  left: -6px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 10px;
+  background-color: #ffffff;
+}
+.Item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Reel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Hearth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Profile img {
+  width: 20px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+
+  border-radius: 100%;
+}
+.Profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
